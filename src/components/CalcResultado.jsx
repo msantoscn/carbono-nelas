@@ -75,6 +75,7 @@ const estilos = {
     color: "#2E8B57",
     fontSize: "2.2rem",
     margin: "15px 0",
+    lineHeight: "1.3",
   },
 };
 
