@@ -52,7 +52,6 @@ export default function CalcResultado({ resultado, onReiniciar }) {
         }}
       ></p>
 
-      {/* Botão Refazer com o mesmo efeito hover padrão */}
       <div style={{ marginTop: "35px" }}>
         <button
           onClick={onReiniciar}

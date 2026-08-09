@@ -12,7 +12,6 @@ export default function Formulario({ onFinalizar }) {
 
   const perguntaAtual = todasAsPerguntas[passoAtual];
 
-  // Quando clica na opção, apenas marca qual foi escolhida (não avança ainda)
   const selecionarOpcao = (index, peso, tipo) => {
     setOpcaoSelecionada(index);
     setRespostasTemporarias({
@@ -21,17 +20,15 @@ export default function Formulario({ onFinalizar }) {
     });
   };
 
-  // Botão "Próxima Pergunta" ou "Finalizar"
   const avancarProxima = () => {
-    if (opcaoSelecionada === null) return; // Segurança caso clique sem selecionar
+    if (opcaoSelecionada === null) return;
 
     const proximoPasso = passoAtual + 1;
 
     if (proximoPasso < todasAsPerguntas.length) {
       setPassoAtual(proximoPasso);
-      setOpcaoSelecionada(null); // Reseta a seleção para a próxima pergunta
+      setOpcaoSelecionada(null);
     } else {
-      // Se chegou ao fim de todas as perguntas, envia o acumulado para calcular o resultado
       onFinalizar(respostasTemporarias);
     }
   };
@@ -72,7 +69,6 @@ export default function Formulario({ onFinalizar }) {
         {perguntaAtual.pergunta}
       </h3>
 
-      {/* Lista de Opções */}
       <div
         style={{
           display: "flex",
@@ -107,7 +103,6 @@ export default function Formulario({ onFinalizar }) {
         })}
       </div>
 
-      {/* Botão Próxima Pergunta com o mesmo efeito visual da Home */}
       <div style={{ textAlign: "right" }}>
         <button
           onClick={avancarProxima}

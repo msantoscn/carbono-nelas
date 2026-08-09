@@ -5,14 +5,11 @@ export default function Home({ onIniciar }) {
 
   return (
     <div style={{ fontFamily: "sans-serif" }}>
-      {/* SEÇÃO DO BANNER (HERO IMAGE) */}
       <div
         style={{
           position: "relative",
           width: "100%",
-          height: "400px",
-          // O gradiente escurece a imagem para destacar o texto branco
-          // Aqui usamos a imagem local que está na pasta public: '/babacu.jpg'
+          height: "300px",
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/babacu.jpg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -24,19 +21,18 @@ export default function Home({ onIniciar }) {
         <h1
           style={{
             color: "white",
-            fontSize: "3rem",
+            fontSize: "50px",
             letterSpacing: "2px",
             textAlign: "center",
             margin: 0,
             textTransform: "uppercase",
-            textShadow: "2px 2px 4px rgba(0,0,0,0.8)", // Sombra para garantir leitura perfeita
+            textShadow: "2px 2px 4px rgba(0,0,0,0.8)",
           }}
         >
           Carbono Delas
         </h1>
       </div>
 
-      {/* SEÇÃO DE CONTEÚDO */}
       <div
         style={{
           textAlign: "center",
