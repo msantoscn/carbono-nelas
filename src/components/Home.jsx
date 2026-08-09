@@ -27,6 +27,7 @@ export default function Home({ onIniciar }) {
             margin: 0,
             textTransform: "uppercase",
             textShadow: "2px 2px 4px rgba(0,0,0,0.8)",
+            lineHeight: "1.3",
           }}
         >
           Carbono Delas
